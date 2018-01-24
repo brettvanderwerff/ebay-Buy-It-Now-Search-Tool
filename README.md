@@ -7,7 +7,7 @@ Example:
 
 Input: 883929391462 
 
-Output:https://imgur.com/a/KuarK
+Output:https://imgur.com/a/KuarK (taken from my email inbox)
 
 ~~~~~~~~~~~~~
 Dependencies:
