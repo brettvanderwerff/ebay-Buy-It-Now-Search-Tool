@@ -9,13 +9,20 @@ Input: 883929391462
 
 Output:https://imgur.com/a/KuarK
 
+~~~~~~~~~~~~~
+Dependencies:
+~~~~~~~~~~~~~
+
+ebaysdk==2.1.5
+
 ~~~~~~~~~~~~~~~~~~~~~~~~
 How to run this program:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.	Download repo
-2.	Configure the program (see below)
-3.	Run ebay_buy_it_now_search_tool.py
+2.  Install the dependencies
+3.	Configure the program (see below)
+4.	Run ebay_buy_it_now_search_tool.py
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 How to configure this program:
