@@ -19,8 +19,9 @@ An ebay App ID production API key is needed, which can be gotten easily from sig
 
 A Gmail account with an email and password is needed to send email from. The google account settings must be modified to allow sending email via less secure apps, which at the time of writing this was:
 
-https://myaccount.google.com/   Apps with account access   Allow less secure apps   ON
-See https://www.youtube.com/watch?v=mP_Ln-Z9-XY&t=5s for more details.
+https://myaccount.google.com/  - Apps with account access  - Allow less secure apps  - ON
+
+(See https://www.youtube.com/watch?v=mP_Ln-Z9-XY&t=5s for more details.)
 
 A receiving email address will also be needed, but many users will just receive messages at the same address that they are using to send email from.
 
