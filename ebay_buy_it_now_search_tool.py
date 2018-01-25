@@ -31,11 +31,28 @@ def run():
              LocatedIn restricts the search the the US.
              sortOrder is set to return the the listings in order from cheapest to more expensive.
              '''
-            input_dictionary = {'productId': {'#text': user_UPC, '@attrs': {'type': 'UPC'}},
-                                'paginationInput': {'entriesPerPage': 100, 'pageNumber': 1}, 'itemFilter': [
-                    {'name': 'ListingType', 'value': ['FixedPrice', 'StoreInventory', 'AuctionWithBIN']},
-                    {'name': 'LocatedIn', 'value': 'US'}],
-                                'sortOrder': 'PricePlusShippingLowest'}
+            input_dictionary = {
+                'productId': {
+                    '#text': user_UPC,
+                    '@attrs': {
+                        'type': 'UPC'
+                    }
+                },
+                'paginationInput': {
+                    'entriesPerPage': 100,
+                    'pageNumber': 1
+                },
+                'itemFilter': [{
+                    'name': 'ListingType',
+                    'value': ['FixedPrice', 'StoreInventory', 'AuctionWithBIN']
+                },
+                    {
+                        'name': 'LocatedIn',
+                        'value': 'US'
+                    }
+                ],
+                'sortOrder': 'PricePlusShippingLowest'
+            }
             api = Finding(appid=api_key, config_file=None)
             response = api.execute('findItemsByProduct', input_dictionary)
             response_dictionary = response.dict()
@@ -60,6 +77,7 @@ def run():
             print(e.response.dict())
             print('Something went wrong, please try again later.')
             exit()
+
 
 if __name__ == '__main__':
     run()
