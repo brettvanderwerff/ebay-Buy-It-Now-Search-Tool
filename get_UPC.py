@@ -10,9 +10,7 @@ def get_UPC():
             'Please enter the UPC of the product you would like to search for and press \'enter\' when finished! \n'
             'Note that many resources for searching UPC\'s exist such as http://upcdatabase.org/search and note that \n'
             'multiple UPCs may pertain to your product of interest.')
-        if not (user_UPC).isdigit():
-            print('I\'m sorry we only take numeric input here.')
-        if len(user_UPC) != 12:
-            print('I\'m sorry UPCs have a length of 12 numbers, please look at your input again.')
+        if not (user_UPC).isdigit() or len(user_UPC) != 12:
+            print('Sorry. UPCs consist of only 12 digits, please look at your input again.')
         else:
             return user_UPC
