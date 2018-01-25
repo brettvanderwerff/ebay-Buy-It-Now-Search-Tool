@@ -42,7 +42,7 @@ A receiving email address will also be needed, but many users will just receive 
 
 Users can modify the number of listings they receive by changing the listing_number argument of the prettify_listings_list() method of the SearchResponse class. The default is to send results of the five cheapest listings.
 
-The time delay between API calls to ebay/results emails to user can be changed my modifying the sleep function in the main file ‘ebay_buy_it_now_search_tool.py’
+The time delay between API calls to ebay/results emails to user can be changed my modifying the wait_time variable in the config.py file
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Additional comments and future directions:
