@@ -6,3 +6,4 @@ api_key = 'Your ebay API key goes here.'
 sending_email_address = 'Your email address goes here.'
 sending_email_address_password = 'Your email password goes here.'
 receiving_email_address = 'A recipient email address goes here. This can be the same as sending_email_address to send emails to yourself.'
+wait_time = 86400
