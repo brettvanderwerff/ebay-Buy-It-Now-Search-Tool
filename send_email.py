@@ -17,7 +17,7 @@ def send_email(subject, msg):
         server.sendmail(sending_email_address, receiving_email_address, message)
         server.quit()
         print("Success: Email sent!")
-    except:
+    except smtplib.SMTPAuthenticationError:
         print("Email failed to send.")
 
 
