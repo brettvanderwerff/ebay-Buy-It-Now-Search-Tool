@@ -8,7 +8,7 @@ listings of products with a user defined UPC.The program is coded to run once ev
 and sends an email to the user with the results.
 '''
 
-from config import api_key, wait_time
+from config import config
 from ebaysdk.finding import Connection as Finding
 from ebaysdk.exception import ConnectionError
 from get_UPC import get_UPC
@@ -53,7 +53,7 @@ def run():
                 ],
                 'sortOrder': 'PricePlusShippingLowest'
             }
-            api = Finding(appid=api_key, config_file=None)
+            api = Finding(appid=config.api_key, config_file=None)
             response = api.execute('findItemsByProduct', input_dictionary)
             response_dictionary = response.dict()
             response_search = SearchResponse(response_dictionary)
@@ -68,7 +68,7 @@ def run():
             '''KeyboardInterrupt exception facilitates the ability to exit the program at anytime when the program is
             run from the terminal.'''
             try:
-                sleep(seconds_in_a_day)
+                sleep(config.wait_time)
             except KeyboardInterrupt:
                 exit()
 
