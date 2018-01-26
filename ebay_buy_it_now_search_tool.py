@@ -68,7 +68,7 @@ def run():
             '''KeyboardInterrupt exception facilitates the ability to exit the program at anytime when the program is
             run from the terminal.'''
             try:
-                sleep(config.wait_time)
+                sleep(int(config.wait_time_in_seconds))
             except KeyboardInterrupt:
                 exit()
 
