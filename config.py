@@ -14,7 +14,7 @@ class Config():
             self.sending_email_address = config['sending_email_address']
             self.sending_email_address_password = config['sending_email_address_password']
             self.receiving_email_address = config['receiving_email_address']
-            self.wait_time = int(config['wait_time'])
+            self.wait_time_in_seconds = int(config['wait_time_in_seconds'])
 
 config = Config()
 
