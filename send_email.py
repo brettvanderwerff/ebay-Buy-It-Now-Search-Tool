@@ -1,8 +1,7 @@
 '''The send_email module contains the send_email function, which uses the SMTP protocol and gmail to send emails.
 '''
-from config import receiving_email_address, sending_email_address, sending_email_address_password
+from config import config
 import smtplib
-
 
 def send_email(subject, msg):
     '''The send email function sends mail to a user and takes subject and msg as arguments. Subject is the subject of
@@ -12,9 +11,9 @@ def send_email(subject, msg):
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
         server.starttls()
-        server.login(sending_email_address, sending_email_address_password)
+        server.login(config.sending_email_address, config.sending_email_address_password)
         message = 'Subject: {}\n\n{}'.format(subject, msg)
-        server.sendmail(sending_email_address, receiving_email_address, message)
+        server.sendmail(config.sending_email_address, config.receiving_email_address, message)
         server.quit()
         print("Success: Email sent!")
     except smtplib.SMTPAuthenticationError:
